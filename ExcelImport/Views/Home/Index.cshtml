@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form enctype="multipart/form-data" method="post" asp-controller="Home" asp-action="ImportExcelFile">
+    <dl>
+        <dt>
+            <label>Télécharger le fichier Excel:</label>
+        </dt>
+        <dd>
+            <input type="file" name="FormFile" id="FormFile">
+            <input class="btn btn-danger" type="submit" value="TELECHARGER" />
+        </dd>
+    </dl>
+    
+</form>
+<br />
+<div class="">
+    <!--Afficher le message si le fichier est téléchargé ou non-->
+    @ViewBag.Message
+</div>
